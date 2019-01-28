@@ -1,0 +1,195 @@
+$colorRed: #d63c37
+$www: (
+	position: absolute
+	width: 30px
+	height: 6px
+	top: 50%
+	left: 50%
+	margin:
+		top: -3px
+		left: -15px
+	background-color: #222
+	transition: 0.4s
+)
+*
+	padding: 0
+	margin: 0
+body
+	color: #666666
+	font-family:(Aileron-Regular)
+	font-size:(18px)
+.name
+		font-family:(Caladea-Bold)
+		font-size:(36px)
+		color: #333333
+		span
+			text-decoration: underline
+.column
+	line-height: 1.5
+	padding: 10px
+	text-align: right
+	width: 470px
+a
+	text-decoration: none
+	color: #333333
+.far
+	position: absolute
+	transform: translate(-30px, 8px)
+/*===================================Container_1======================================*/
+
+.container_1
+	background-image: url('../img/bg_1.png')
+	background-repeat: no-repeat
+	background-size: cover
+	padding: 630px 0
+	text-align: center
+	.name
+		font-size:(48px)
+		margin-bottom: 45px
+		span
+			color: $colorRed
+			text-decoration: none
+.text
+	width: (1170/1920)*100%
+	margin: 0 auto
+	line-height: 2
+.menu-btn
+	display: block
+	width: 30px
+	height: 30px
+	border-radius: 50%
+	position: absolute
+	top: 65px
+	right: 50px 
+	span
+		position: absolute
+		width: 30px
+		height: 6px
+		top: 50%
+		left: 50%
+		margin:
+			top: -3px
+			left: -15px
+		background-color: #222
+		transition: 0.4s
+		&::before
+			content: ''
+			position: absolute
+			width: 30px
+			height: 6px
+			top: 50%
+			left: 50%
+			margin:
+				top: -3px
+				left: -15px
+			background-color: #222
+			transform: translateY(-15px)
+			transition: 0.4s
+		&::after
+			content: ''
+			position: absolute
+			width: 30px
+			height: 6px
+			top: 50%
+			left: 50%
+			margin:
+				top: -3px
+				left: -15px
+			background-color: #222
+			transform: translateY(15px)
+			transition: 0.4s
+.menu-btn_active span
+	height: 0
+.menu-btn_active span:before
+	transform: rotate(45deg)
+.menu-btn_active span:after
+	transform: rotate(-45deg)
+.navbar
+	position: absolute
+	display: flex
+	justify-content: space-between 
+	top: 65px
+	left: 50%
+	transform: translate(-50%, -50%)
+	width: 600px
+	margin: 0 auto
+.links
+	position: absolute
+	display: flex
+	flex-direction: column
+	right: 50px
+	top: 120px
+	a
+		width: 30px
+		height: 30px
+/*===================================Container_2======================================*/
+
+.container_2
+	padding-top: 346px
+	background-color: #f6f6f6
+	text-align: center
+	span
+		color: $colorRed
+	.box_2
+		display: flex
+		div:first-of-type
+			width: 50%
+			position: relative
+			img
+				position: absolute
+				bottom: 0
+				right: 0
+				margin-right: 100px
+	.column
+		text-align: left
+		padding: 20px 0 346px 0
+		line-height: 2
+		span
+			position: relative
+			display: block
+			margin-top: 20px
+
+/*===================================Container_3======================================*/
+
+.container_3
+	clear: both
+	padding:
+		top: 312px
+		bottom: 312px
+	background-color: $colorRed
+	color: #333333
+	text-align: center
+	.column
+		padding:
+			left: 65px
+			right: 65px
+		p
+			margin-bottom: 10px
+			color: white
+			font-size:(24px)
+		span
+			font-family:(Aileron-Bold)
+#list
+	margin-top: 50px
+	display: flex
+	justify-content: center
+.itm_link
+	position: relative
+	a
+		display: block
+		position: absolute
+		width: 60px
+		height: 60px
+		border: solid 4px #fcfcfc
+		border-radius: 50%
+		right: -97px
+		color: #fcfcfc
+		text-align: center
+		span
+			line-height: 60px
+			font-size:(30px)
+	.l1
+		background-color: #fcfcfc
+		color: $colorRed
+.item
+	margin-bottom: 100px
