@@ -1,16 +1,4 @@
 $colorRed: #d63c37
-$www: (
-	position: absolute
-	width: 30px
-	height: 6px
-	top: 50%
-	left: 50%
-	margin:
-		top: -3px
-		left: -15px
-	background-color: #222
-	transition: 0.4s
-)
 *
 	padding: 0
 	margin: 0
@@ -32,23 +20,62 @@ body
 a
 	text-decoration: none
 	color: #333333
-.far
-	position: absolute
-	transform: translate(-30px, 8px)
-/*===================================Container_1======================================*/
+/*=================================== HEADER ======================================*/
 
-.container_1
+.header
 	background-image: url('../img/bg_1.png')
 	background-repeat: no-repeat
 	background-size: cover
 	padding: 630px 0
 	text-align: center
+	position: relative
 	.name
 		font-size:(48px)
 		margin-bottom: 45px
 		span
 			color: $colorRed
 			text-decoration: none
+	.down
+		position: absolute
+		font-size: (60px)
+		color: $colorRed
+		transform: translateX(-50%)
+		line-height: 0.6
+		bottom: 40px
+		opacity: 0.6
+		transition: opacity 0.4s
+		&:hover
+			opacity: 1
+	.navbar
+		position: absolute
+		display: flex
+		justify-content: space-between 
+		top: 65px
+		left: 50%
+		transform: translate(-50%, -50%)
+		width: 600px
+		margin: 0 auto
+		line-height: 2
+		a
+			transition: all 0.4s
+			&:hover
+				color: $colorRed
+				text-decoration: underline
+	.links
+		position: absolute
+		display: flex
+		flex-direction: column
+		right: 65px
+		top: 125px
+		a
+			width: 30px
+			height: 30px
+			margin-bottom: 10px
+			i
+				line-height: 30px
+			&:hover
+				color: $colorRed
+				transition: all 0.4s
 .text
 	width: (1170/1920)*100%
 	margin: 0 auto
@@ -60,7 +87,7 @@ a
 	border-radius: 50%
 	position: absolute
 	top: 65px
-	right: 50px 
+	right: 65px 
 	span
 		position: absolute
 		width: 30px
@@ -71,7 +98,7 @@ a
 			top: -3px
 			left: -15px
 		background-color: #222
-		transition: 0.4s
+		transition: 0.5s
 		&::before
 			content: ''
 			position: absolute
@@ -104,71 +131,64 @@ a
 	transform: rotate(45deg)
 .menu-btn_active span:after
 	transform: rotate(-45deg)
-.navbar
-	position: absolute
-	display: flex
-	justify-content: space-between 
-	top: 65px
-	left: 50%
-	transform: translate(-50%, -50%)
-	width: 600px
-	margin: 0 auto
-.links
-	position: absolute
-	display: flex
-	flex-direction: column
-	right: 50px
-	top: 120px
-	a
-		width: 30px
-		height: 30px
-/*===================================Container_2======================================*/
 
-.container_2
+
+/*=================================== Container ======================================*/
+
+.container
 	padding-top: 346px
 	background-color: #f6f6f6
-	text-align: center
 	span
 		color: $colorRed
-	.box_2
+	.box
 		display: flex
-		div:first-of-type
-			width: 50%
-			position: relative
-			img
-				position: absolute
-				bottom: 0
-				right: 0
-				margin-right: 100px
+		justify-content: center
+		overflow: hidden
+		img
+			display: block
+			align-self: flex-end
+			width: 570px
+			margin-right: 130px
+		.far
+			position: absolute
+			transform: translate(-48px, 8px)
 	.column
 		text-align: left
-		padding: 20px 0 346px 0
 		line-height: 2
+		padding-bottom: 346px
 		span
 			position: relative
 			display: block
 			margin-top: 20px
+		p
+			font-family: (Caladea-Bold)
+			font-size: (36px)
+			transform: translate(-100px)
+			span
+				display: inline
 
-/*===================================Container_3======================================*/
+/*=================================== FOOTER ======================================*/
 
-.container_3
-	clear: both
+.footer
 	padding:
 		top: 312px
 		bottom: 312px
+		left: (375/1920)*100%
+		right: (360/1920)*100%
 	background-color: $colorRed
 	color: #333333
-	text-align: center
 	.column
+		width: 600px
 		padding:
-			left: 65px
-			right: 65px
+			right: 130px
 		p
 			margin-bottom: 10px
 			color: white
 			font-size:(24px)
 		span
 			font-family:(Aileron-Bold)
+	.name
+		padding-left: (845/1920)*100%
 #list
 	margin-top: 50px
 	display: flex
@@ -182,14 +202,15 @@ a
 		height: 60px
 		border: solid 4px #fcfcfc
 		border-radius: 50%
-		right: -97px
+		right: -98px
 		color: #fcfcfc
 		text-align: center
+		transition: all 0.4s
 		span
 			line-height: 60px
 			font-size:(30px)
-	.l1
-		background-color: #fcfcfc
-		color: $colorRed
+		&:hover
+			color: $colorRed
+			background-color: #fcfcfc
 .item
 	margin-bottom: 100px

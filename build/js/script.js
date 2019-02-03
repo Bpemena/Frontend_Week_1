@@ -11,9 +11,16 @@ $(document).ready(function(){
 	}
 
 	$('.menu-btn').on('click',function(e){
-		e.preventDefault;
+		e.preventDefault();
 		$(this).toggleClass('menu-btn_active');
 		$('.navbar').slideToggle(400)
 		$('.links').slideToggle(400)
 	});
+
+    $('.down').on('click',function(event) {
+    	event.preventDefault();
+    	var id = $(this).attr('href'),
+    	top = $(id).offset().top;
+    	$('body,html').animate({scrollTop: top}, 1500);
+    });
 });
